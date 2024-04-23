@@ -32,7 +32,8 @@ public class ShowCakeServlet extends HttpServlet {
                     out.print("<tr><td>"+cake.getId()+"</td><td>"+
                             cake.getName()+"</td><td>"+
                             cake.getPrice()+"</td><td>"+
-                            "修改 <a href='delete?id="+cake.getId()+"'>删除</a>"+"</td></tr>");
+                            "<a href='edit?id="+cake.getId()+"'>修改</a>"+"</td><td>"+
+                            "<a href='delete?id="+cake.getId()+"'>删除</a>"+"</td></tr>");
                 }
 
                 out.print("</table></body></html>");

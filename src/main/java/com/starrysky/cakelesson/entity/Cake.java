@@ -6,6 +6,10 @@ public class Cake {
     private int price;
     private String description;
 
+    public Cake(){
+
+    }
+
     public Cake(String name, int price, String description) {
         this.name = name;
         this.price = price;
