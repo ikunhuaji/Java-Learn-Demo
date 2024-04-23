@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <context-param>
+        <param-name>globalString</param-name>
+        <param-value>abc</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.starrysky.servlettest.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql:localhost:3306/mydb</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <!--让servlet提前构造 -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CakeServlet</servlet-name>
+        <servlet-class>com.starrysky.servlettest.CakeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CakeServlet</servlet-name>
+        <url-pattern>/cake</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ShowServlet</servlet-name>
+        <servlet-class>com.starrysky.servlettest.ShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowServlet</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
+
+</web-app>

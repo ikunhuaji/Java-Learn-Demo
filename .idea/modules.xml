@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ERROR/ERROR.iml" filepath="$PROJECT_DIR$/ERROR/ERROR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringAndStringBuffer/StringAndStringBuffer.iml" filepath="$PROJECT_DIR$/StringAndStringBuffer/StringAndStringBuffer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Subject 8/Subject 8.iml" filepath="$PROJECT_DIR$/Subject 8/Subject 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abstract_抽象类/abstract_抽象类.iml" filepath="$PROJECT_DIR$/abstract_抽象类/abstract_抽象类.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android1/android1.iml" filepath="$PROJECT_DIR$/android1/android1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android2/android2.iml" filepath="$PROJECT_DIR$/android2/android2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enum(枚举)/enum(枚举).iml" filepath="$PROJECT_DIR$/enum(枚举)/enum(枚举).iml" />
+      <module fileurl="file://$PROJECT_DIR$/file/file.iml" filepath="$PROJECT_DIR$/file/file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework3/homework3.iml" filepath="$PROJECT_DIR$/homework3/homework3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework4/homework4.iml" filepath="$PROJECT_DIR$/homework4/homework4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inner_class/inner_class.iml" filepath="$PROJECT_DIR$/inner_class/inner_class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/new/new.iml" filepath="$PROJECT_DIR$/new/new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p1_1/p1_1.iml" filepath="$PROJECT_DIR$/p1_1/p1_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ruance/ruance.iml" filepath="$PROJECT_DIR$/ruance/ruance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stl/stl.iml" filepath="$PROJECT_DIR$/stl/stl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subject 10 static/subject 10 static.iml" filepath="$PROJECT_DIR$/subject 10 static/subject 10 static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread-1-2/thread-1-2.iml" filepath="$PROJECT_DIR$/thread-1-2/thread-1-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zoo(继承)/zoo(继承).iml" filepath="$PROJECT_DIR$/zoo(继承)/zoo(继承).iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="cake">cake</a>
+    <a href="show">show</a>
+<!--    <a href="code">code</a>-->
+    </br>
+    <img src="code" id="img" onclick="rest()">
+    <a href="#" onclick="rest()">看不清，换一张</a>
+</body>
+
+<!--http://localhost:8080/servlettest_war_exploded/-->
+
+<script>
+    function rest(){
+        img = document.getElementById("img");
+        img.src=img.src+"?"+Math.random()*100;
+    }
+</script>
+
+</html>

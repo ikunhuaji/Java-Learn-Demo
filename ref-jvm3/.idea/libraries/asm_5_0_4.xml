@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="asm-5.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/asm-5.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-3.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/tools.jar!/" />
+    </SOURCES>
+  </library>
+</component>

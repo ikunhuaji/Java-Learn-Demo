@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="ref-jvm3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/ref_jvm3_jar/ref-jvm3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.jar!/" />
+      <root url="file://$PROJECT_DIR$/out/artifacts/ref_jvm3_jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/tools.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/out/artifacts/ref_jvm3_jar" recursive="false" />
+  </library>
+</component>
