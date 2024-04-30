@@ -20,4 +20,8 @@ public class Cart {
             map.put(cake.getId(),cartItem);
         }
     }
+
+    public HashMap<Integer,CartItem> getMap(){
+        return map;
+    }
 }

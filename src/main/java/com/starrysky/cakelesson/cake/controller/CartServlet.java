@@ -21,8 +21,20 @@ public class CartServlet extends HttpServlet {
             }
         }
 
-        Cart cart = new Cart();
+        HttpSession session = request.getSession();
+
+        Cart cart=null;
+        Object obj = session.getAttribute("cart");
+        if(obj!=null){
+            cart=(Cart) obj;
+        }
+        else{
+            cart=new Cart();
+        }
+
+        //Cart cart = new Cart();
         cart.addCake(cake);
+        session.setAttribute("cart",cart);
         response.sendRedirect("list");
     }
 
