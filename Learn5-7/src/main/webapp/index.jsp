@@ -9,6 +9,7 @@
 <br/>
 <a href="hello">查看请求头</a>
 <form action="login" method="post">
+    <h1>聊天室</h1><br>
     账号：<input type="text" name="username"><br>
     <%
         Object obj = request.getAttribute("errorinfo");
