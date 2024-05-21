@@ -23,7 +23,9 @@ public class HelloServlet extends HttpServlet {
         this.getServletContext().setAttribute("un","李四");
         //ServletContextAttributeListener 监听
 
-        request.getSession().setAttribute("age",20);//不执行binding监听
+        request.getSession().setAttribute("age",20);//不执行binding监听,执行AttributeListener的added
+        request.getSession().setAttribute("age",30);//执行AttributeListener的replaced
+        request.getSession().removeAttribute("age");//执行AttributeListener的removed
         request.getSession().setAttribute("teacher",new Teacher());//执行监听
         //binding 监听 实现 HttpSessionBindingListener 的类
         //与HttpSessionAttributeListener 区别

@@ -9,4 +9,7 @@
     <listener>
         <listener-class>com.starrysky.listener.MyServletContextAttributeListener</listener-class>
     </listener>
+    <listener>
+        <listener-class>com.starrysky.listener.MyHttpSessionAttributeListener</listener-class>
+    </listener>
 </web-app>
