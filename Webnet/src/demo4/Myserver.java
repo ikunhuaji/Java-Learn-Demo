@@ -9,6 +9,7 @@ public class Myserver {
         try{
             DatagramSocket datagramSocket = new DatagramSocket(8888);
 
+
             byte[] cache = new byte[20];
             DatagramPacket datagramPacket = new DatagramPacket(cache, cache.length);
 

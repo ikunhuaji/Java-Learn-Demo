@@ -4,6 +4,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.HttpCookie;
 
 //@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -14,6 +15,7 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String name = request.getParameter("name");
         System.out.println(name);
+
 
 //        PrintWriter out = response.getWriter();
 //        out.print("Hello "+name);
