@@ -1,13 +1,27 @@
 package com.starrysky.jdbc.util;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 
 public class DbUtil {
+
+    private static Properties properties;
+
     static {
         //加载驱动
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            InputStream inputStream = DbUtil.class.getResourceAsStream("/jdbc.properties");
+            properties = new Properties();
+
+            properties.load(inputStream);
+
+            Class.forName(properties.getProperty("jdbc.driverClassName"));
         }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
             e.printStackTrace();
         }
     }
@@ -15,9 +29,9 @@ public class DbUtil {
     public static Connection getCon(){
         try {
             //获取数据库连接
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cakeonline_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8",
-                    "root",
-                    "xjl13615875481"
+            Connection con = DriverManager.getConnection(properties.getProperty("jdbc.url"),
+                    properties.getProperty("jdbc.username"),
+                    properties.getProperty("jdbc.password")
             );
 
             return con;
@@ -41,6 +55,17 @@ public class DbUtil {
             }
         }catch (SQLException e){
             e.printStackTrace();
+        }
+    }
+
+    public static ResultSet executeQuery(PreparedStatement pstm,String sql){
+        try{
+            ResultSet rs = pstm.executeQuery(sql);
+
+            return rs;
+        }catch (SQLException e){
+            e.printStackTrace();
+            return null;
         }
     }
 }
