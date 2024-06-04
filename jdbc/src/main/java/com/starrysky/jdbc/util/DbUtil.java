@@ -58,14 +58,26 @@ public class DbUtil {
         }
     }
 
-    public static ResultSet executeQuery(PreparedStatement pstm,String sql){
+    public static ResultSet executeQuery(PreparedStatement pstm){
         try{
-            ResultSet rs = pstm.executeQuery(sql);
+            ResultSet rs = pstm.executeQuery();
 
             return rs;
         }catch (SQLException e){
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static int excuteUpdate(PreparedStatement pstm){
+        try{
+            int count = pstm.executeUpdate();
+            return count;
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return 0;
     }
 }
