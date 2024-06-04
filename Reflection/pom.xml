@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.starrysky</groupId>
-    <artifactId>Lesson_9</artifactId>
+    <artifactId>Reflection</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Lesson_9</name>
     <packaging>war</packaging>
