@@ -9,7 +9,6 @@ public class BaseDao {
         String sql = "insert into ";
         sql+=cls.getSimpleName()+"(";//SimpleName 无 com.starrysky……前缀
 
-
         Field[] fields = cls.getDeclaredFields();
         for(Field field:fields){
             sql+=field.getName()+",";
