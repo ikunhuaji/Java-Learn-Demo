@@ -3,4 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+
+    <welcome-file-list>
+        <!--指定tomcat启动进入的首页-->
+        <welcome-file>index.jsp</welcome-file>
+        <!--若index.jsp未找到，则执行下一个访问页面-->
+        <welcome-file>add.html</welcome-file>
+    </welcome-file-list>
+
 </web-app>
