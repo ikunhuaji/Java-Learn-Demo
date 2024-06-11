@@ -34,6 +34,7 @@ public class ShowCakeServlet extends HttpServlet {
                             cake.getPrice()+"</td><td>"+
                             "<a href='edit?id="+cake.getId()+"'>修改</a>"+"</td><td>"+
                             "<a href='buy?id="+cake.getId()+"'>买</a>"+"</td><td>"+
+                            "<a href='comment?id="+cake.getId()+"'>评论</a>"+"</td><td>"+
                             "<a href='delete?id="+cake.getId()+"'>删除</a>"+"</td></tr>");
                 }
 
