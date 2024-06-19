@@ -57,5 +57,6 @@ public class DateTest
         //LocalTime 只有时分秒
         System.out.println(dateTime.toLocalTime());
 
+        System.out.println(now);
     }
 }

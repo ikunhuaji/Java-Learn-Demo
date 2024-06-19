@@ -10,8 +10,8 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/register")
-public class RegisterServlet extends HttpServlet {
+@WebServlet("/updateUserInfo")
+public class UpdateUserInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -25,27 +25,18 @@ public class RegisterServlet extends HttpServlet {
         String pwd = request.getParameter("pwd");
         String email = request.getParameter("email");
         String nickName = request.getParameter("nickName");
+        int id = Integer.parseInt(request.getParameter("id"));
+        String avatar = request.getParameter("avatar");
 
-        if(userName == null||"".equals(userName)){
-            os.write(ResultUtils.error("用户名不能为空"));
-        }else if(pwd == null||"".equals(pwd)){
-            os.write(ResultUtils.error("密码不能为空"));
-        }else if(email == null||"".equals(email)){
-            os.write(ResultUtils.error("邮箱不能为空"));
-        }else if(nickName == null||"".equals(nickName)){
-            os.write(ResultUtils.error("昵称不能为空"));
-        } else{
-            int id = UserInfoDao.findByName(userName);
+        User user = new User(userName,pwd,email,nickName,id,avatar);
 
-            if(id!=0){
-                os.write(ResultUtils.error("用户已存在"));
-            }else{
-                id=UserInfoDao.getSize()+1;
-                User user = new User(userName,pwd,email,nickName,id,UserInfoDao.defaultAvatar);
+        UserInfoDao.updateUserInfo(id,user);
 
-                UserInfoDao.saveUser(user);
-                os.write(ResultUtils.success("注册成功",user));
-            }
-        }
+        os.write(ResultUtils.success("更改成功",user));
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 }

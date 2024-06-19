@@ -1,12 +1,12 @@
 package com.starrysky.androidhomeworkservlet.Dao;
 
-import com.starrysky.androidhomeworkservlet.entity.Product;
+import com.starrysky.androidhomeworkservlet.entity.Buy;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDao {
+public class BuyDao {
     static {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -30,95 +30,59 @@ public class ProductDao {
         }
     }
 
-    public static List<Product> getList(){
-        List<Product> products = new ArrayList<>();
-
+    public static List<Buy> getList(String userName,String buyTime){
+        List<Buy>buys = new ArrayList<>();
         PreparedStatement ps = null;
         ResultSet rs = null;
         Connection con = getCon();
 
-        String sql = "select * from tbl_product";
+        String sql = "select * from tbl_buy where userName = ? and buyTime = ?";
 
         try {
             ps = con.prepareStatement(sql);
-            rs = ps.executeQuery();;
-
-            while (rs.next()){
-                String name = rs.getString(1);
-                double price = rs.getDouble(2);
-                int nowCnt = rs.getInt(3);
-                String img = rs.getString(4);
-
-                products.add(new Product(name,price,nowCnt,img));
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
-        close(rs,ps,con);
-
-        return products;
-    }
-
-    public static void add(String name,int cnt){
-        PreparedStatement ps = null;
-        Connection con = getCon();
-
-        String sql = "update tbl_product set nowCnt = nowCnt + ? where name = ? ";
-
-        try {
-            ps=con.prepareStatement(sql);
-            ps.setInt(1,cnt);
-            ps.setString(2,name);
-            ps.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
-        close(ps,con);
-    }
-
-    public static void reduce(String name,int cnt){
-        PreparedStatement ps = null;
-        Connection con = getCon();
-
-        String sql = "update tbl_product set nowCnt = nowCnt - ? where name = ? ";
-
-        try {
-            ps=con.prepareStatement(sql);
-            ps.setInt(1,cnt);
-            ps.setString(2,name);
-            ps.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-
-        close(ps,con);
-    }
-
-    public static int getCnt(String name) {
-        PreparedStatement ps = null;
-        Connection con = getCon();
-        ResultSet rs = null;
-        int nowCnt = 0;
-
-        String sql = "select nowCnt from tbl_cart where name = ?";
-
-        try {
-            ps = con.prepareStatement(sql);
-            ps.setString(1,name);
+            ps.setString(1,userName);
+            ps.setString(2,buyTime);
             rs = ps.executeQuery();
 
-            if(rs.next()){
-                nowCnt = rs.getInt(1);
+            while(rs.next()){
+                String name = rs.getString(2);
+                double price = rs.getDouble(3);
+                int cnt = rs.getInt(4);
+                String img = rs.getString(5);
+
+                buys.add(new Buy(userName,name,price,cnt,img,buyTime));
             }
+
+            buys.size();
 
         }catch (SQLException e){
             e.printStackTrace();
         }
-        close(rs,ps,con);
 
-        return nowCnt;
+        close(rs,ps,con);
+        return buys;
+    }
+
+    public static void add(String userName, String name, double price, int cnt, String img, String buyTime) {
+        PreparedStatement ps = null;
+        Connection con = getCon();
+
+        String sql = "insert into tbl_buy values(?,?,?,?,?,?)";
+
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1,userName);
+            ps.setString(2,name);
+            ps.setDouble(3,price);
+            ps.setInt(4,cnt);
+            ps.setString(5,img);
+            ps.setString(6,buyTime);
+            ps.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        close(ps,con);
     }
 
     public static void close(ResultSet rs, PreparedStatement ps, Connection con){

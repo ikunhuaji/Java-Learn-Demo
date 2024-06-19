@@ -1,18 +1,26 @@
 package com.starrysky.androidhomeworkservlet.entity;
 
-import java.io.Serializable;
-
-public class Product implements Serializable {
+public class Cart {
+    private String userName;
     private String name;
     private double price;
-    private int nowCnt;
+    private int cnt;
     private String img;
 
-    public Product(String name, double price, int nowCnt, String img) {
+    public Cart(String userName, String name, double price, int cnt, String img) {
+        this.userName = userName;
         this.name = name;
         this.price = price;
-        this.nowCnt = nowCnt;
+        this.cnt = cnt;
         this.img = img;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getName() {
@@ -31,12 +39,12 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public int getNowCnt() {
-        return nowCnt;
+    public int getCnt() {
+        return cnt;
     }
 
-    public void setNowCnt(int nowCnt) {
-        this.nowCnt = nowCnt;
+    public void setCnt(int cnt) {
+        this.cnt = cnt;
     }
 
     public String getImg() {

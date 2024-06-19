@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/json;charset=utf-8");
         PrintWriter os = response.getWriter();
 
-        System.out.println("进入");
+//        System.out.println("进入");
 
         String userName = request.getParameter("userName");
         String pwd = request.getParameter("pwd");

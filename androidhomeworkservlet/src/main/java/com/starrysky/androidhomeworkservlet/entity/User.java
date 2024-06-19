@@ -6,7 +6,6 @@ public class User {
     private String email;
     private String nickName;
     private int id;
-
     private String avatar;
 
     public User(String userName, String pwd, String email, String nickName,int id,String avatar) {
@@ -15,6 +14,7 @@ public class User {
         this.email = email;
         this.nickName = nickName;
         this.id=id;
+        this.avatar=avatar;
     }
 
     public String getUserName() {

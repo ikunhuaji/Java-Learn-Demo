@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class UserInfoDao {
 
-    private static String defaultAvatar = "https://t11.baidu.com/it/u=4241520012,198480940&fm=30&app=106&f=JPEG?w=640&h=615&s=36381A8AC8D707E3560DBD6C03005040";
+    public static final String defaultAvatar = "https://t11.baidu.com/it/u=4241520012,198480940&fm=30&app=106&f=JPEG?w=640&h=615&s=36381A8AC8D707E3560DBD6C03005040";
 
     static {
         try{
@@ -156,7 +156,7 @@ public class UserInfoDao {
         PreparedStatement ps = null;
         Connection con = getCon();
 
-        String sql = "update tbl_cake set userName = ?, pwd = ?, email = ?, nickName = ?, avatar = ? where id = ?";
+        String sql = "update tbl_userinfo set userName = ?, pwd = ?, email = ?, nickName = ?, avatar = ? where id = ?";
 
         try {
             ps=con.prepareStatement(sql);
