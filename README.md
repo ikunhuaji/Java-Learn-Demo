@@ -22,10 +22,10 @@
   - **web.xml 中** < servlet > 与 < servlet-mapping > 使用
     - **< servlet >** 中 **< servlet-name >** 和 **< servlet-class >**
     - **< servlet-mapping >** 中 **< servlet-name >** 和 **<url-pattern>**
-- [重定向与转发请求 登录界面](https://github.com/ikunhuaji/Java-Learn-Demo/tree/master/webrr)
+- [重定向与转发请求区别 登录界面](https://github.com/ikunhuaji/Java-Learn-Demo/tree/master/webrr)
   - GenericServlet 通用 Servlet 类 , HttpServlet TCP 协议 Servlet类
   - **index.jsp** < a > href 传输数据给 LoginServlet , @WebServlet 注解 Servlet 的 url-pattern
   - **LoginServlet** doGet 中 getParameter 获取 HttpServletRequest 数据
     - **response.sendRedirect** 重定向 无法通过 getParameter 获取原参数
     - **request.getRequestDispatcher("?").forward(request,response)** 转发请求 可获取原参数
-  - **ShowServlet** 
+  - **ShowServlet** 打印 getParameter 参数 与 getAttribute 参数 , 检验是否可获取
