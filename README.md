@@ -29,3 +29,4 @@
     - **response.sendRedirect** 重定向 无法通过 getParameter 获取原参数
     - **request.getRequestDispatcher("?").forward(request,response)** 转发请求 可获取原参数
   - **ShowServlet** 打印 getParameter 参数 与 getAttribute 参数 , 检验是否可获取
+- 
