@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/CakeLesson" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/demo-jsp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/javalearn2/demo-jsp" vcs="Git" />
-  </component>
-</project>
